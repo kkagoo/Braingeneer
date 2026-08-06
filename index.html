@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From a Desk to a Shelf: The Infrastructure Behind Brain Organoid Research</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,500&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F7F4EF;
+    --ink: #2B2825;
+    --muted: #6B655C;
+    --rule: #DCD5C9;
+    --accent: #A8562E;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Sora', sans-serif;
+    line-height: 1.7;
+  }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.1rem;
+    line-height: 1.25;
+    margin: 0 0 16px;
+    color: var(--ink);
+  }
+  .deck {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.15rem;
+    color: var(--muted);
+    margin: 0 0 32px;
+    line-height: 1.5;
+  }
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: 44px 0 16px;
+    color: var(--ink);
+  }
+  p {
+    font-size: 1.05rem;
+    margin: 0 0 22px;
+  }
+  .photo-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0 0 10px;
+  }
+  .photo-row figure {
+    margin: 0;
+  }
+  .photo-row img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid var(--rule);
+  }
+  .photo-row figcaption {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+  .photo-note {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin: 0 0 32px;
+  }
+  @media (max-width: 520px) {
+    .photo-row {
+      grid-template-columns: 1fr;
+    }
+    .photo-row img {
+      height: auto;
+    }
+  }
+  hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 48px 0 24px;
+  }
+  .footer {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .footer p { margin: 0 0 10px; }
+  .footer .label {
+    font-weight: 600;
+    color: var(--ink);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>From a Desk to a Shelf: The Infrastructure Behind Brain Organoid Research</h1>
+  <p class="deck">Three generations of hardware at Braingeneers show what has to change before an organoid experiment can be run beyond the lab that built the original system.</p>
+
+  <p>I have photos of three generations of one setup. The first filled a desk: pumps, circuit boards, tubing, metal rails, a laptop tethered in by cable. The second was smaller, but still spread across several connected pieces of equipment. The version running the day I visited fit on a single glass shelf.</p>
+
+  <div class="photo-row">
+    <figure>
+      <img src="images/braingeneers-setup-1.jpg" alt="An early, desk-sized version of the organoid support system, with pumps, driver boards, tubing, and cables spread across a lab bench.">
+      <figcaption>Generation one: pumps, boards, and tubing spread across a full desk.</figcaption>
+    </figure>
+    <figure>
+      <img src="images/braingeneers-setup-2.jpg" alt="A more compact, second-generation version of the system, still made up of several connected pieces of equipment.">
+      <figcaption>Generation two: smaller, but still several connected pieces.</figcaption>
+    </figure>
+    <figure>
+      <img src="images/braingeneers-setup-3.jpg" alt="The current setup on a single glass shelf, showing MaxWell Biosystems' MaxOne and MaxTwo electrode reading hardware.">
+      <figcaption>The version I saw: MaxWell Biosystems hardware on one glass shelf.</figcaption>
+    </figure>
+  </div>
+  <p class="photo-note">Photos from my visit to the Braingeneers lab.</p>
+
+  <p>The important change was not simply that the equipment became smaller. Each version removed some of the experiment's dependence on the people and conditions of the original lab. Braingeneers is an interdisciplinary research group spanning UC Santa Cruz and several partner institutions, led by David Haussler, Mircea Teodorescu, and Sofie Salama, and it works with brain organoids: small clusters of human cells grown to reproduce some features of developing brain tissue. Keeping them alive and studying them for weeks means circulating the liquid that feeds them, recording their electrical activity, and capturing images as they change, all without disturbing the culture. If every experiment needs a custom tangle of equipment and someone who built it standing by, the work can't easily leave the lab that built it.</p>
+
+  <p>That's the problem this hardware is solving. A 2025 paper from the team, led by Yohei Rosen and Kivilcim Doganyigit, who I also met that morning (the two are named inventors on a pending patent for the device), reports that a sealed version of the system can keep organoids under observation for weeks, circulate their feed automatically, and reduce water loss, with organoid health comparable to a standard incubator. A follow-up paper does something similar for the microscope, moving the light source and electronics outside the incubator to cut cost and size. Together, the two systems make it possible to observe organoids for weeks with less manual handling and less equipment inside the incubator.</p>
+
+  <h2>Keeping the center alive</h2>
+
+  <p>Organoids run into a size limit fast: past a certain point, cells in the middle stop getting enough oxygen and nutrients by simple diffusion, and the interior starts to die. A 2026 preprint from a UCSF-UCSC team tried fusing two organoids together to get around it, one built to form blood-vessel-like tissue, one built to form cortical tissue. Pressed together, they self-assembled a shared capillary network at the point of contact, and some of the vascular cells developed features associated with the blood-brain barrier. It's early, not a working circulatory system, not a product. The practical goal is similar: sustain the experiment for longer without manually engineering every part of its support system.</p>
+
+  <h2>What changes at hundreds of experiments</h2>
+
+  <p>Braingeneers has said, in UC Santa Cruz's own reporting, that it wants to run hundreds and eventually thousands of these organoid experiments in parallel over months, using AI to study how neural connections develop and where they go wrong. The group already leads the NIH BRAIN Initiative's Brain Cell Data Explorer and serves as the Analysis Center for NIMH's Psygene project, studying 250 genes linked to neurodevelopmental and psychiatric disease.</p>
+
+  <p>At that scale, the equipment and the resulting data become separate problems. One device I saw was a chip from MaxWell Biosystems containing 26,400 electrode sites, of which up to 1,020 can be selected for simultaneous recording, giving researchers a detailed view of electrical activity across the tissue.</p>
+
+  <p>The MaxWell chip also gives the energy question a concrete context. A system that continuously records electrical activity, interprets what it sees, and sometimes responds is using power at several points. Computing is only one of them. The sensors, data transfer, and any stimulation or other physical response also consume energy.</p>
+
+  <p>A recent preprint co-authored by Teodorescu demonstrates the distinction in a different medical context. The study used a computer model of the brain circuits involved in Parkinson's tremor, not organoids or data from a patient. Its controller learned when a stimulation pulse was needed instead of stimulating continuously, reducing the total stimulation charge by 80 percent. When the researchers deployed the controller on a neuromorphic chip, it also used about 28 times less energy per decision than an equivalent neural network running on conventional edge hardware.</p>
+
+  <p>Those are two separate savings: less energy spent delivering stimulation and less energy spent deciding when to stimulate. The study does not show that the same savings would apply to organoid experiments, or that neuromorphic chips are part of the Braingeneers platform. It does suggest a useful design principle. If future systems continuously process electrical signals from hundreds of cultures, low-power, event-driven chips may help. But the relevant measure will be the energy used by the whole system, not the chip alone.</p>
+
+  <p>The group is also collaborating with Stanford professor Jure Leskovec, whose lab develops AI models for biology. UC Santa Cruz says that combining those models with the organoid platform could help researchers study how neural circuits develop, respond to drugs, and fail in disease. This is an active research direction, not a finished system.</p>
+
+  <p>The work will also need partners willing to test whether these organoid models are useful for studying disease or evaluating treatments, along with funders willing to support the infrastructure needed to run experiments at this scale.</p>
+
+  <p>Some of that is already underway. The automation work behind the incubator-free system I described above has spun into Open Culture Science, founded by Genomics Institute alumni Spencer Seiler and Kateryna Voitiuk. The company is running a pilot program for its Habitat platform at <a href="https://openculture.ai">openculture.ai</a>.</p>
+
+  <p>The progression from desk to shelf does not prove that the platform is ready to support thousands of experiments. It does show that the team is removing some of the practical dependencies that would otherwise make that goal impossible. That is what made the prototypes interesting to me: they were not simply getting smaller. They were making the experiment easier to reproduce beyond the lab that built the original system.</p>
+
+  <p>UC Santa Cruz's own reporting is direct about what the rest will take: funders, technology collaborators, and experts. For general interest in partnering with the lab itself, they list genomics.info@ucsc.edu as the contact. I'm happy to help make an introduction if any of this resonates with something you're building.</p>
+
+  <hr>
+
+  <div class="footer">
+    <p><span class="label">Disclosure:</span> I have no financial relationship with Braingeneers, UC Santa Cruz, MaxWell Biosystems, or Open Culture Science.</p>
+
+    <p><span class="label">Sources:</span></p>
+    <p>Rosen, Y., Doganyigit, K., et al., Haussler, D., Teodorescu, M. (2025). "Incubator-Free Organoid Culture in a Sealed Recirculatory System." bioRxiv preprint. <a href="https://doi.org/10.1101/2025.09.03.673593">https://doi.org/10.1101/2025.09.03.673593</a></p>
+    <p>Ehrlich, D., Rosen, Y., et al., Salama, S.R., Haussler, D., Teodorescu, M. (2026). "A Modular In-Incubator Microscope for Longitudinal Live Cell Microscopy." bioRxiv preprint. <a href="https://doi.org/10.64898/2026.01.20.699789">https://doi.org/10.64898/2026.01.20.699789</a></p>
+    <p>Bhalla, S., et al., Haussler, D., Teodorescu, M., et al., Winkler, E.A. (2026). "Scalable high-fidelity human vascularized cortical assembloids recapitulate neurovascular co-development and cell specialization." bioRxiv preprint. <a href="https://doi.org/10.64898/2026.01.09.698753">https://doi.org/10.64898/2026.01.09.698753</a></p>
+    <p>Miyatsu, R. (2026). "The frontier of brain science: AI and organoid research takes center stage in Silicon Valley." UC Santa Cruz News, June 2, 2026. <a href="https://news.ucsc.edu/2026/06/frontier-brain-science-with-ai-and-organoids/">https://news.ucsc.edu/2026/06/frontier-brain-science-with-ai-and-organoids/</a></p>
+    <p>Miyatsu, R. (2026). "'Petri Dish 2.0': A new startup is bringing automation to biology's most tedious tasks." Braingeneers website, Feb 20, 2026. <a href="https://braingeneers.ucsc.edu/2026/02/20/petri-dish-2-0-a-new-startup-is-bringing-automation-to-biologys-most-tedious-tasks/">https://braingeneers.ucsc.edu/2026/02/20/petri-dish-2-0-a-new-startup-is-bringing-automation-to-biologys-most-tedious-tasks/</a></p>
+    <p>Cerf, E. (2023). "UC Santa Cruz to lead data collection center for major federal project on genetic underpinnings of neurological conditions." UC Santa Cruz News, May 9, 2023. <a href="https://news.ucsc.edu/2023/05/psygene-announcement/">https://news.ucsc.edu/2023/05/psygene-announcement/</a></p>
+    <p>University of California Technology Transfer Office. "'Incubator-Free' Vessels For Cell Culture Which Do Not Use An Air Intermediate For Gas Regulation." Patent pending, inventors Doganyigit and Rosen. <a href="https://techtransfer.universityofcalifornia.edu/NCD/33512.html">https://techtransfer.universityofcalifornia.edu/NCD/33512.html</a></p>
+    <p>MaxWell Biosystems. "MaxOne Single-Well HD-MEA" product specifications. <a href="https://www.mxwbio.com/products/maxone">https://www.mxwbio.com/products/maxone</a></p>
+    <p>Nguyen, B., Josephson, C., Teodorescu, M., Cauwenberghs, G., Eshraghian, J. (2026). "Neuromorphic Energy-Aware Learning for Adaptive Deep Brain Stimulation." arXiv preprint, posted June 26, 2026, not peer-reviewed. <a href="https://arxiv.org/abs/2606.28600">https://arxiv.org/abs/2606.28600</a></p>
+
+    <p><span class="label">Written</span> July 2026. Updated August 2026.</p>
+  </div>
+
+</div>
+</body>
+</html>
